@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Rusak</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .text-box {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 20px;
+      overflow-x: auto;
+      background: #fafafa;
+    }
+
+    pre {
+      margin: 0;
+      font-family: monospace;
+      line-height: 1.5;
+      white-space: pre-wrap;
+    }
+
+    .copy-btn {
+      margin-top: 12px;
+      padding: 10px 16px;
+      border: 1px solid #ddd;
+      background: white;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="text-box">
+      <pre id="text">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Website Rusak&lt;/title&gt;
+  &lt;style&gt;
+    .kotak {
+      background-color: blue
+      padding: 20px;
+      color: white;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Selamat Datang&lt;/h1&gt;
+  &lt;div class="kotak"&gt;
+    &lt;p&gt;Ini adalah kotak berwarna&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;button onclick="sapa()"&gt;Klik Saya&lt;/button&gt;
+  &lt;script&gt;
+    function Sapa() {
+      alert("Halo!")
+    }
+  &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+    </div>
+
+    <button class="copy-btn" onclick="copyText()">📋 Salin</button>
+
+  </div>
+
+  <script>
+    function copyText() {
+      const text = document.getElementById("text").innerText;
+
+      navigator.clipboard.writeText(text);
+
+      const button = document.querySelector(".copy-btn");
+      button.innerText = "✓ Tersalin";
+
+      setTimeout(() => {
+        button.innerText = "📋 Salin";
+      }, 1500);
+    }
+  </script>
+
+</body>
+</html>
+
+    
